@@ -130,7 +130,7 @@ export default function Home() {
     dot: (color?: string): React.CSSProperties => ({ width:'5px', height:'5px', borderRadius:'50%', background: color || 'currentColor', flexShrink:0 }),
     main: { overflow:'hidden', display:'flex', flexDirection:'column' as const },
     header: { display:'flex', alignItems:'center', justifyContent:'space-between', padding:'16px 24px', borderBottom:'1px solid var(--border)', flexShrink:0 },
-    headerTitle: { fontSize:'17px', fontWeight:600 },
+    headerTitle: { fontSize:'22px', fontWeight:600 },
     headerSub: { fontFamily:'IBM Plex Mono', fontSize:'10px', color:'var(--text3)', letterSpacing:'.08em', marginTop:'2px' },
     panel: { flex:1, overflowY:'auto' as const, padding:'20px 24px' },
     card: { background:'var(--bg2)', border:'1px solid var(--border)', borderRadius:'10px', padding:'14px 16px' },
