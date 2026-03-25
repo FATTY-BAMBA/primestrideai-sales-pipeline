@@ -60,7 +60,7 @@ export function scoreProspectLocally(data: {
   score = Math.min(score, 100)
   const tier = score >= 80 ? 'hot' : score >= 60 ? 'warm' : 'cold'
 
-  return { score, tier, reason: reasons.join(' · '), products: [...new Set(products)] }
+  return { score, tier, reason: reasons.join(' · '), products: Array.from(new Set(products)) }
 }
 
 export const OUTREACH_TEMPLATES = {
