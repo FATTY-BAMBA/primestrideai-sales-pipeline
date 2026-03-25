@@ -37,8 +37,14 @@ export default function Home() {
 
   async function loadProspects() {
     setLoading(true)
-    const { data } = await supabase.from('prospects').select('*').order('score', { ascending: false })
-    setProspects(data || [])
+    try {
+      const { data, error } = await supabase.from('prospects').select('*').order('score', { ascending: false })
+      if (error) console.error('Supabase error:', error.message)
+      setProspects(data || [])
+    } catch (e) {
+      console.error('Failed to load prospects:', e)
+      setProspects([])
+    }
     setLoading(false)
   }
 
